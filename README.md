@@ -23,15 +23,6 @@ Aplicativo Android desenvolvido com Jetpack Compose que sugere destinos de viage
 
 ---
 
-## 📸 Screenshots
-
-> *(<img width="394" height="887" alt="Captura de tela 2025-09-29 224006" src="https://github.com/user-attachments/assets/2a0ca2d9-c29f-4f45-9640-2c2b05f16000" />
-)*
->  *(<img width="397" height="885" alt="Captura de tela 2025-09-29 224026" src="https://github.com/user-attachments/assets/a32c9785-6f28-4002-bb98-1997d6e15919" />)
-*
-
----
-
 ## 🚀 Como Rodar o Projeto
 
 1. Clone o repositório:
