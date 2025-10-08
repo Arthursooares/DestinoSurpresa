@@ -19,7 +19,7 @@ val destinosAventura = listOf(
             Destino(
                 nome = "Monte Roraima",
     curiosidade = "Um dos lugares mais misteriosos da América do Sul.",
-                curiosidadeHistorica = "\tFormado há mais de 2 bilhões de anos, é uma das formações geológicas mais antigas da Terra.",
+                curiosidadeHistorica = "Formado há mais de 2 bilhões de anos, é uma das formações geológicas mais antigas da Terra.",
 
                 frase = "Prepare-se para escalar o topo do mundo!",
     imagemUrl = "https://www.oikostravel.com.br/wp-content/uploads/2020/07/Expedi%C3%A7%C3%A3o-Monte-Roraima.jpg"
@@ -27,7 +27,7 @@ val destinosAventura = listOf(
 Destino(
 nome = "Jalapão",
 curiosidade = "Dunas douradas e fervedouros cristalinos.",
-    curiosidadeHistorica = "\tO nome vem da planta “jalapa-do-Brasil”, usada por indígenas como remédio natural.",
+    curiosidadeHistorica = "O nome vem da planta “jalapa-do-Brasil”, usada por indígenas como remédio natural.",
 
     frase = "Aventure-se pelo coração do cerrado!",
 imagemUrl = "https://alemdacurva.com/wp-content/uploads/2019/06/fervedouro-bela-vista-compressed.jpg"

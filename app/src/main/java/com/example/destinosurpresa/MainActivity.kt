@@ -19,13 +19,16 @@ class MainActivity : ComponentActivity() {
                 val navController = rememberNavController()
                 val viewModel: MainViewModel by viewModels()
 
-                NavHost(navController = navController, startDestination = "loading") {
-                    composable("loading") {
-                        LoadingScreen(navController)
+                NavHost(navController = navController, startDestination = "loading/home") {
+                    composable("loading/{destino}") { backStackEntry ->
+                        val destino = backStackEntry.arguments?.getString("destino") ?: "home"
+                        LoadingScreen(navController = navController, destinoFinal = destino)
                     }
+
                     composable("home") {
                         HomeScreen(navController)
                     }
+
                     composable("result/{tipo}") { backStackEntry ->
                         val tipo = backStackEntry.arguments?.getString("tipo") ?: "Aventura"
                         ResultScreen(
@@ -35,7 +38,6 @@ class MainActivity : ComponentActivity() {
                         )
                     }
                 }
-
             }
         }
     }

@@ -31,7 +31,7 @@ fun ResultScreen(tipo: String, navController: NavController, viewModel: MainView
             .fillMaxSize()
             .background(
                 brush = Brush.verticalGradient(
-                    colors = listOf(Color(0xFF004D40), Color(0xFF00838F))
+                    colors = listOf(Color(0xFF0D47A1), 	Color(0xFFCFD8DC))
                 )
             ),
         contentAlignment = Alignment.Center
@@ -88,7 +88,7 @@ fun ResultScreen(tipo: String, navController: NavController, viewModel: MainView
                     .fillMaxWidth()
                     .padding(vertical = 8.dp),
                 shape = RoundedCornerShape(12.dp),
-                colors = CardDefaults.cardColors(containerColor = Color(0xFF00897B)) // verde suave
+                colors = CardDefaults.cardColors(containerColor = Color(0xFF0D47A1))
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
                     Text(
@@ -115,7 +115,7 @@ fun ResultScreen(tipo: String, navController: NavController, viewModel: MainView
             Button(
                 onClick = { navController.popBackStack() },
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(0xFF002F2E),
+                    containerColor = Color(0xFF0D47A1),
                     contentColor = Color.White
                 ),
 

@@ -29,87 +29,98 @@ fun HomeScreen(navController: NavController) {
             .fillMaxSize()
             .background(
                 brush = Brush.verticalGradient(
-                    colors = listOf(Color(0xFF004D40), Color(0xFF00838F))
+                    colors = listOf(Color(0xFF0D47A1), 	Color(0xFFCFD8DC)
+
+                    )
                 )
             ),
         contentAlignment = Alignment.Center
     ) {
-        Column(
+        Box(
             modifier = Modifier
-                .fillMaxSize()
-
-                .padding(vertical = 32.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
-        )
-        {
-
-            Box(
+                .fillMaxWidth()
+                .wrapContentHeight()
+            .offset(y = (-32).dp),
+            contentAlignment = Alignment.Center
+        ) {
+            Column(
                 modifier = Modifier
-                    .fillMaxWidth(),
-                contentAlignment = Alignment.Center
+                    .padding(vertical = 32.dp)
+                    .widthIn(max = 400.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Image(
-                    painter = painterResource(id = R.drawable.logo),
-                    contentDescription = "Logo do app",
-                    modifier = Modifier
-                        .size(200.dp)
-                        .padding(bottom = 16.dp)
-                )
-            }
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    Text(
+                        text = "Destino Surpresa",
+                        style = MaterialTheme.typography.headlineLarge,
+                        color = Color.White
+                    )
+                    Spacer(modifier = Modifier.height(4.dp))
+                    Divider(
+                        modifier = Modifier
+                            .width(220.dp)
+                            .height(2.dp),
+                        color = Color.White
+                    )
+                }
 
-            Spacer(modifier = Modifier.height(16.dp))
 
-            Text(
-                text = "Escolha o tipo de viagem",
-                style = MaterialTheme.typography.bodyLarge,
-                color = Color.White
-            )
 
-            Spacer(modifier = Modifier.height(32.dp))
+                Spacer(modifier = Modifier.height(16.dp))
 
-            TipoViagemBotao(
-                tipo = "Aventura",
-                emoji = "🧗",
-                corFundo = Color(0xFF00695C),
-                onClick = { navController.navigate("result/Aventura") }
-            )
-
-            Spacer(modifier = Modifier.height(16.dp))
-
-            TipoViagemBotao(
-                tipo = "Relaxamento",
-                emoji = "🧘",
-                corFundo = Color(0xFF00796B),
-                onClick = { navController.navigate("result/Relaxamento") }
-            )
-
-            Spacer(modifier = Modifier.height(16.dp))
-
-            TipoViagemBotao(
-                tipo = "Cultura",
-                emoji = "🏛️",
-                corFundo = Color(0xFF00897B),
-                onClick = { navController.navigate("result/Cultura") }
-            )
-
-            Spacer(modifier = Modifier.height(24.dp))
-
-            Card(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp),
-                colors = CardDefaults.cardColors(containerColor = Color(0xFF004D40))
-            ) {
                 Text(
-                    text = "🌍 Destaque: Viagens únicas e inesquecíveis",
-                    modifier = Modifier.padding(16.dp),
+                    text = "Escolha o tipo de viagem",
                     style = MaterialTheme.typography.bodyLarge,
                     color = Color.White
                 )
+
+                Spacer(modifier = Modifier.height(32.dp))
+
+                TipoViagemBotao(
+                    tipo = "Aventura",
+                    emoji = "🧗",
+                    corFundo = Color(0xFF1565C0),
+                    onClick = { navController.navigate("result/Aventura") }
+                )
+
+                Spacer(modifier = Modifier.height(16.dp))
+
+                TipoViagemBotao(
+                    tipo = "Relaxamento",
+                    emoji = "🧘",
+                    corFundo = Color(0xFF1565C0),
+                    onClick = { navController.navigate("result/Relaxamento") }
+                )
+
+                Spacer(modifier = Modifier.height(16.dp))
+
+                TipoViagemBotao(
+                    tipo = "Cultura",
+                    emoji = "🏛️",
+                    corFundo = Color(0xFF1565C0),
+                    onClick = { navController.navigate("result/Cultura") }
+                )
+
+                Spacer(modifier = Modifier.height(24.dp))
+
+                Card(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp),
+                    colors = CardDefaults.cardColors(containerColor = Color(0xFF0D47A1))
+                ) {
+                    Text(
+                        text = "🌍 Destaque: Viagens únicas e inesquecíveis",
+                        modifier = Modifier.padding(16.dp),
+                        style = MaterialTheme.typography.bodyLarge,
+                        color = Color.White
+                    )
+                }
             }
         }
     }
 }
+
 
 @Composable
 fun TipoViagemBotao(
@@ -128,7 +139,7 @@ fun TipoViagemBotao(
             contentColor = Color.White
         ),
         shape = RoundedCornerShape(12.dp),
-        border = BorderStroke(2.dp, Color(0xFF388E3C))
+        border = BorderStroke(2.dp, Color(0xFF0D47A1))
     ) {
         Text(
             text = "$emoji $tipo", // ← aqui junta emoji + texto

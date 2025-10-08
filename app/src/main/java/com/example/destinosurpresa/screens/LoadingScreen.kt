@@ -10,16 +10,14 @@ import androidx.navigation.NavController
 import kotlinx.coroutines.delay
 
 @Composable
-fun LoadingScreen(navController: NavController) {
-    // Estado para controlar o tempo de exibição
+fun LoadingScreen(navController: NavController, destinoFinal: String) {
     LaunchedEffect(Unit) {
-        delay(3000) // espera 3 segundos
-        navController.navigate("home") {
-            popUpTo("loading") { inclusive = true } // remove a tela de loading da pilha
+        delay(3000)
+        navController.navigate(destinoFinal) {
+            popUpTo("loading/$destinoFinal") { inclusive = true }
         }
     }
 
-    // UI da tela de carregamento
     Box(
         modifier = Modifier
             .fillMaxSize()
